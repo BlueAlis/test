@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Getting started with Vue.js</title>
+  </head>
+  <body>
+     <div id="app">
+        <p>{{ message }}</p>
+        <button @click="hello">Click me please!</button>
+      </div>
+    <script>
+        const app = new Vue({
+          el: '#app',
+          data: {
+            message: 'Ahoy!'
+          },
+          methods: {
+            hello: function () {
+              this.message = 'Thank you for click on me :)'
+            }
+          }
+        })
+    </script>
+  </body>
+</html>
